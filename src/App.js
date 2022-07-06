@@ -15,7 +15,9 @@ function App() {
         value={incrementAmount}
       />
       <button onClick={() => dispatch(increment())}>＋</button>
-      <button onClick={() => dispatch(decrement())}>ー</button>
+      <button onClick={() => dispatch(decrement())} disabled={count === 0}>
+        ー
+      </button>
       <button
         onClick={() => dispatch(incrementByAmount(Number(incrementAmount)))}
       >
